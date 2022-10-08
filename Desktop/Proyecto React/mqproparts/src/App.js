@@ -1,6 +1,7 @@
 import './App.css';
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
 import Navbar from './componentes/Navbar/Navbar';
+import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
 
 
 function App() {
@@ -8,7 +9,8 @@ function App() {
     <>
      
      <Navbar />
-     <ItemListContainer greeting={'Bienvenidos'}/>
+     <ItemListContainer greeting={'Nuestros Productos'}/>
+     <ItemDetailContainer /> 
      
      </>
   );
