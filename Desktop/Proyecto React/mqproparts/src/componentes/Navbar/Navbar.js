@@ -2,6 +2,7 @@ import React from 'react'
 import './Navbar.css'
 import CartWidget from '../CartWidget/CartWidget'
 import Logo from '../Logo/Logo'
+import { Link } from 'react-router-dom'
 
 
 const Navbar=() => {
@@ -11,9 +12,9 @@ const Navbar=() => {
                 <Logo/>    
             </div>
             <div >
-            <button> Home </button>
-            <button> Productos</button>
-            <button> Quienes Somos?</button>
+            <Link> Home </Link>
+            <Link> Productos</Link>
+            <Link> Quienes Somos?</Link>
             </div>
             <div>
                 <CartWidget/>

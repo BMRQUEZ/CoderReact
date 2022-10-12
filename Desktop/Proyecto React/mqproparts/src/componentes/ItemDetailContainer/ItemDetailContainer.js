@@ -1,23 +1,32 @@
 import { useState,  useEffect } from "react"
 import { getProduct } from "../ItemListContainer/ansycMonck"
+import { useParams } from "react-router-dom"
 
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState()
+    const [loading, setLoading] = useState (true)
+
+   const {productId} = useParams ()
     useEffect(() => {
-        getProduct ('1').then (product => {
+        getProduct (productId).then (product => {
             setProduct(product) 
+    }).finally (() => {
+        setLoading(false)
     })
 }, [])
 
 console.log (product)
+if (loading) {
+    return <h1>Loading...</h1>
+} 
     return (
         <div>
             <h1>Detalle del producto</h1>
             <div>
-                <h1>{product?.name} </h1>
-                <h2>{product?.category} </h2>             
-                <h3>{product?.description} </h3>
-                <h3>Stock disponible {product?.stock} </h3>
+                <h1>{product.name} </h1>
+                <h2>{product.category} </h2>             
+                <h3>{product.description} </h3>
+                <h3>Stock disponible {product.stock} </h3>
         
             </div>
         </div>

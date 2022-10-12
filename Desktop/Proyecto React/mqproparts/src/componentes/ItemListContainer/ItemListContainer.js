@@ -1,6 +1,6 @@
 import {useState, useEffect } from 'react'
 import { getProducts } from './ansycMonck'
-
+import ItemList from '../ItemList/ItemList'
 const ItemListContainer=({greeting}) => {
     const [products, setProducts]= useState([])
 
@@ -12,18 +12,8 @@ const ItemListContainer=({greeting}) => {
         console.log (products)
     return (
           <div> 
-                <h1> Hola</h1>
-                <div>
-                    {products.map (prod => (
-                        <div key={prod.id}>
-                            <h1>{prod.name}</h1>
-                            <h2>$ {prod.price}</h2>
-                            <button> Ver Detalle</button>
-                        </div>
-                    ))}
-            
-
-                </div>             
+                <h1> Productos</h1>
+                  <ItemList products={products}/>     
          </div>  
     
   )

@@ -1,9 +1,10 @@
+
 const products =[
     { id :'1',
       name : 'Selectora Rapida',
       price :'46000',
       category: 'Selectora de Cambios',
-      img: '',
+      img: '' ,
       stock: '25',
       description : 'Selectora Rapida Falcon Chevy Torino'
 
