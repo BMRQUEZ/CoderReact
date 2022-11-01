@@ -1,17 +1,11 @@
-import Item from "../Item/Item"
+const ItemList = ({ products }) => {
+    return (
+        <ul className={true ? 'una-clase' : 'otra-clase'}>
+            { products.map(product => <li key={product.id}>{product.name}</li>) }
 
-
-const ItemList = ({products})=>{
-    return(
-        <div>
-                    {products.map (prod => (
-                        <Item key={prod.id} prod={prod} />
-                    ))}
-            
-
-                </div>      
-
+            { false ? <h1>hola</h1> : <h1>chau</h1>}
+        </ul>
     )
-
 }
+
 export default ItemList
