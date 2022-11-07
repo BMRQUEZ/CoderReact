@@ -21,7 +21,7 @@ const ItemListContainer = ({ greeting }) => {
 
     // const productosTransformados = products.map(product => <li key={product.id}>{product.name}</li>)
     if(loading) {
-        return <h1>Loading...</h1>
+        return <h1>Cargando...</h1>
     }
     
 
